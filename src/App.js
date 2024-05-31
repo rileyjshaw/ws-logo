@@ -44,11 +44,15 @@ const App = () => {
 			<color attach="background" args={['#fff']} />
 			<Center position={[0, 0, 0]}>
 				<Center position={[0, 2.5, 0.5]}>
-					<Text size={0.6} font={'/easy_grotesk.json'}>
+					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
 						Hi team,
 					</Text>
 				</Center>
-				<TextCircle text="I’m so excited to work together!  " radius={1.2} font="/cartograph.json" />
+				<TextCircle
+					text="I’m so excited to work together!  "
+					radius={1.2}
+					font={`${process.env.PUBLIC_URL}/cartograph.json`}
+				/>
 				<AlwaysFacing>
 					<Mask color={WATERSHED_BLUE} />
 				</AlwaysFacing>
@@ -57,13 +61,13 @@ const App = () => {
 					<SpinningRing key={index} {...props} />
 				))}
 				<Center position={[0, -2.5, 0.5]}>
-					<Text size={0.6} font={'/easy_grotesk.json'}>
-						See you in
+					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
+						{daysLeft > 0 ? 'See you in' : 'Let’s decarbonize'}
 					</Text>
 				</Center>
 				<Center position={[0, -3.5, 0.5]}>
-					<Text size={0.6} font={'/easy_grotesk.json'}>
-						{daysLeft} days!
+					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
+						{daysLeft > 0 ? `${daysLeft} days!` : 'the economy!'}
 					</Text>
 				</Center>
 			</Center>
