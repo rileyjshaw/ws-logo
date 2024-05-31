@@ -1,11 +1,12 @@
 import React, { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Line } from '@react-three/drei';
 // import { useMask } from '@react-three/drei';
 import { X, Y } from './constants';
 
 const SineWave = ({ segments = 100, color }) => {
 	// const stencil = useMask(1);
+	const { size } = useThree();
 	const curveRef = useRef();
 
 	const points = useMemo(() => {
@@ -23,7 +24,7 @@ const SineWave = ({ segments = 100, color }) => {
 		curveRef.current.geometry.setPositions(points.flat());
 	});
 
-	return <Line ref={curveRef} points={points} color={color} lineWidth={17} depthTest={false} />;
+	return <Line ref={curveRef} points={points} color={color} lineWidth={2 + size.height / 80} depthTest={false} />;
 };
 
 export default SineWave;
