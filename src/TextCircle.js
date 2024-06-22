@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import Text from './Text';
 
-const TextCircle = ({ text, radius = 1.2, ...props }) => {
+const TextCircle = ({ text, radius = 1, ...props }) => {
 	const groupRef = useRef();
 
 	useFrame(({ clock }) => {
@@ -22,7 +22,13 @@ const TextCircle = ({ text, radius = 1.2, ...props }) => {
 	return (
 		<mesh ref={groupRef}>
 			{positions.map((pos, i) => (
-				<Text key={i} position={pos} rotation={[0, 0, -i * angleStep + Math.PI / 2]} size={0.3} {...props}>
+				<Text
+					key={i}
+					position={pos}
+					rotation={[0, 0, -(i + 0.5) * angleStep + Math.PI / 2]}
+					size={0.3}
+					{...props}
+				>
 					{text[i]}
 				</Text>
 			))}
