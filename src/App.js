@@ -19,10 +19,10 @@ const rings = Array.from({ length: N_RINGS }, (_, index) => ({
 }));
 
 function Rig() {
-	const { camera, mouse } = useThree();
+	const { camera } = useThree();
 	const positionVec = useMemo(() => ({ x: 0, y: 0 }), []);
 	const rotationVec = useMemo(() => ({ x: 0, y: 0 }), []);
-	return useFrame(() => {
+	return useFrame(({ mouse }) => {
 		positionVec.x = mouse.x * 2;
 		positionVec.y = mouse.y * 2;
 		positionVec.z = camera.position.z;
