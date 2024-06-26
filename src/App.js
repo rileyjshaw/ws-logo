@@ -44,7 +44,7 @@ const App = () => {
 			<color attach="background" args={['#fff']} />
 			<Center position={[0, 0, 0]}>
 				<Center position={[0, 2.5, 0.5]}>
-					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
+					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
 						Hi team,
 					</Text>
 				</Center>
@@ -61,12 +61,12 @@ const App = () => {
 					<SpinningRing key={index} {...props} />
 				))}
 				<Center position={[0, -2.5, 0.5]}>
-					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
+					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
 						{daysLeft > 0 ? 'See you in' : 'Let’s decarbonize'}
 					</Text>
 				</Center>
 				<Center position={[0, -3.5, 0.5]}>
-					<Text size={0.6} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
+					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
 						{daysLeft > 0 ? `${daysLeft} days!` : 'the economy!'}
 					</Text>
 				</Center>
