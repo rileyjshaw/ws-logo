@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ws-logo/static/css/main.f2119f28.css",
+    "main.js": "/ws-logo/static/js/main.165819bf.js",
+    "static/js/453.cf131e4d.chunk.js": "/ws-logo/static/js/453.cf131e4d.chunk.js",
+    "index.html": "/ws-logo/index.html",
+    "main.f2119f28.css.map": "/ws-logo/static/css/main.f2119f28.css.map",
+    "main.165819bf.js.map": "/ws-logo/static/js/main.165819bf.js.map",
+    "453.cf131e4d.chunk.js.map": "/ws-logo/static/js/453.cf131e4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2119f28.css",
+    "static/js/main.165819bf.js"
+  ]
+}
